@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import CourseInfo from './Component/CourseInfo'
 import ExperienceItem from './Component/ExperienceItem'
+import ReviewCard from './Component/ReviewCard'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
     <>
     <CourseInfo/>
     <ExperienceItem />
+    <ReviewCard rating={5} name="Ronnie Tan, NYP" content="Great course! Would highly reccomend to future students." />
     </>
   )
 }
