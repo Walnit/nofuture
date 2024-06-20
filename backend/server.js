@@ -15,7 +15,7 @@ app.get('/', (request, response) => {
 app.get('/secure', authenticateToken, (request, response) => {
   response.send(`Hello, ${request.user.name}! This is a secure area.`);
 });
-
+  
 let server;
 
 function start() {
