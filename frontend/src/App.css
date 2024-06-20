@@ -1,5 +1,6 @@
 #root {
   font-family: "Plus Jakarta Sans", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -119,4 +120,101 @@
 .coursedetail-content {
   color: black;
   font-size: 15px;
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.home-title {
+  font-size: 64px;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+.home-subtitle {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.searchbar-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(100deg, #fcb79598 0%, #dec5e275 100%);
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.searchbar-input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 16px;
+  flex-grow: 1;
+  background: none;
+}
+
+.searchbar-button {
+  background: none;
+  border: none;
+  padding: 10px;
+}
+
+.searchbar-icon {
+  height: 20px;
+  width: 20px;
+  stroke: black;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  width: 300px;
+  background-color: #ffeac0;
+  outline: none;
+  border: none;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.quiz-container {
+  width: 100%;
+  margin-top: 48px;
+  background: linear-gradient(120deg, rgba(171, 211, 218, 0.2) 0%, rgba(255, 212, 124, 0.2) 100%);
+  mix-blend-mode: hard-light;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.quiz-container > p {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.quiz-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #ffffff;
+  outline: none;
+  border: none;
+  font-size: 24px;
+  border-radius: 100px;
+  margin-bottom: 24px;
 }
