@@ -6,6 +6,12 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
+let events = [
+  {id: 1, date: "13 Mar", content: "NYP Open House"},
+  {id: 2, date: "15 Mar", content: "Pharmaceutical Conferences"},
+  {id: 3, date: "16 Mar", content: "Dialogue Sessions by Industrial Experts, Networking Session"}
+];
+
 // Public route
 app.get('/', (request, response) => {
   response.send('Hello World!');
