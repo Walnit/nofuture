@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import CourseInfo from './Component/CourseInfo'
-import ExperienceItem from './Component/ExperienceItem'
 import Middlesections from './Component/Middlesections'
 import './App.css'
 import HomePage from './Component/HomePage'

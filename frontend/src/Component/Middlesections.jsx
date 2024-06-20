@@ -2,6 +2,7 @@ import React from "react";
 import ReviewCard from "./ReviewCard";
 import ExperienceItem from "./ExperienceItem";
 import CourseDetail from "./CourseDetail";
+import FindMentor from "./FindMentor";
 
 export default function Middlesections() {
   return (
@@ -18,6 +19,10 @@ export default function Middlesections() {
           </div>
           <div>
             <h2>Find Mentor</h2>
+            <div className="fmentor-container">
+              <FindMentor photo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/510px-Default_pfp.svg.png" content_title="Callie" content="Lion City Secondary (2018 - 2021)<br>NYP (2022 - Present)" profile="VIEW FULL PROFILE" />
+              <FindMentor photo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/510px-Default_pfp.svg.png" content_title="Panela" content="Green Park Secondary (2019 - 2022)<br>SP (2022 - Present)" profile="VIEW FULL PROFILE" />
+            </div>
           </div>
         </div>
         <div>
