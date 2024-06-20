@@ -15,11 +15,7 @@ function App() {
     subtitle={"Learn the biology and chemistry behind creating new drugs and medicines."}
     />
     <Middlesections/>
-    <ExperienceItem date="13 Mar" content="NYP Open House"/>
-    <br />
-    <ExperienceItem date="14 Mar" content="Pharmaceutical Conferences"/>
-    <br />
-    <ExperienceItem date="15 Mar" content="Dialogue Sessions by Industrial Experts, Networking Session"/>
+    
     </>
   )
 }

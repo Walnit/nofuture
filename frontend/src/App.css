@@ -5,11 +5,14 @@
 }
 
 .contact-button {
+  border-width: 0;
   background-color: #ffa8a8;
   border-radius: 100px;
   margin-left: 16px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
   font-size: 16px;
 }
 
@@ -34,6 +37,9 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 1em;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 12px;
 }
 
 .stars {
@@ -50,8 +56,11 @@
   background-color: white;
   border-radius: 10px;
   display: flex;
+  align-items: center;
+  margin-bottom: 12px;
 }
 .exp-date{
+  text-align: center;
   color: black;
   font-size: 25px;
   font-weight: bold;
@@ -62,4 +71,27 @@
   color: black;
   font-size: 20px;
   margin: 20px 0 20px 0;
+}
+
+.middlesections {
+  padding: 20px;
+  width: auto;
+  background: linear-gradient(120deg, rgba(171, 211, 218, 0.2) 0%, rgba(255, 212, 124, 0.2) 100%);
+  mix-blend-mode: hard-light;
+  border-radius: 20px;
+}
+
+.middlesections > div {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.middlesections > div > div {
+  flex-grow: 2;
+}
+
+
+.middlesections > div > div:last-child {
+  flex-grow: 1;
 }
