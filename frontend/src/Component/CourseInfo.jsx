@@ -7,14 +7,22 @@ export default function CourseInfo({ content1, title, subtitle }) {
           {content1}
           <span style={{ color: "#2400FF" }}>{title}</span>
         </p>
-        <p
+        <h1
           style={{
+            display: "inline-block",
             background:
-              "linear-gradient(to bottom, Transparente 0%,Transparente 50%,red 50%,red 100%)",
+              "linear-gradient(120deg, rgba(171, 211, 218) 0%, rgba(255, 212, 124) 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            minWidth: "fit-content",
+            marginTop: "0px",
+            marginBottom: "0px",
+            fontSize: "60px",
+            fontWeight: "bold",
           }}
         >
-          <h1>{title} </h1>
-        </p>
+          {title}{" "}
+        </h1>
         <p>{subtitle}</p>
       </div>
     </>
