@@ -1,6 +1,21 @@
 const { Pool } = require('pg');
 const dotenv = require('dotenv');
+const winston = require('winston');
+
 dotenv.config();
+
+// logging
+const logger = winston.createLogger({
+    level: 'info',
+    format: winston.format.combine(
+        winston.format.timestamp(),
+        winston.format.json()
+    ),
+    transports: [
+        new winston.transports.File({ filename: 'error.log', level: 'error' }),
+        new winston.transports.File({ filename: 'combined.log' })
+    ]
+});
 
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL
@@ -15,9 +30,9 @@ const setupDatabase = async () => {
     );`;
     try {
         await pool.query(createTableText);
-        console.log('Table setup completed.');
+        logger.info('Table setup completed.');
     } catch (err) {
-        console.error('Error setting up the database:', err);
+        logger.error('Error setting up the database:', err);
     }
 };
 
