@@ -14,6 +14,11 @@ function App() {
     <CourseInfo/>
     <ExperienceItem />
     <ReviewCard rating={5} name="Ronnie Tan, NYP" content="Great course! Would highly reccomend to future students." />
+    <ExperienceItem date="13 Mar" content="NYP Open House"/>
+    <br />
+    <ExperienceItem date="14 Mar" content="Pharmaceutical Conferences"/>
+    <br />
+    <ExperienceItem date="15 Mar" content="Dialogue Sessions by Industrial Experts, Networking Session"/>
     </>
   )
 }
