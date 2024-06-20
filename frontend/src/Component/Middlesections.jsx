@@ -7,7 +7,7 @@ export default function Middlesections() {
         padding: '20px',
         width: 'auto',
         height: '400px',
-        background: 'linear-gradient(50deg, rgba(171, 211, 218, 0.2) 50%,  rgba(255, 212, 124, 0.2) 50%)',
+        background: 'linear-gradient(120deg, rgba(171, 211, 218, 0.2) 0%, rgba(255, 212, 124, 0.2) 100%)',
         mixBlendMode:'hard-light',
         borderRadius: '20px'
       }}
