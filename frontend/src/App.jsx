@@ -11,7 +11,11 @@ function App() {
   return (
     <>
     <CourseInfo/>
-    <ExperienceItem />
+    <ExperienceItem date="13 Mar" content="NYP Open House"/>
+    <br />
+    <ExperienceItem date="14 Mar" content="Pharmaceutical Conferences"/>
+    <br />
+    <ExperienceItem date="15 Mar" content="Dialogue Sessions by Industrial Experts, Networking Session"/>
     </>
   )
 }
