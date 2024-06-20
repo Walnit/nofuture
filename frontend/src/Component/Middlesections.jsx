@@ -1,6 +1,7 @@
 import React from "react";
 import ReviewCard from "./ReviewCard";
 import ExperienceItem from "./ExperienceItem";
+import CourseDetail from "./CourseDetail";
 
 export default function Middlesections() {
   return (
@@ -9,6 +10,11 @@ export default function Middlesections() {
         <div>
           <div>
             <h2>Course Information</h2>
+            <div className="cinfo-container">
+              <CourseDetail title="Schools offering the course" content="NYP, NP, SP, TP, RP"/>
+              <CourseDetail title="What you might expect to learn" content="Pharmeceutical Compounding<br>Dispensing Medicine"/>
+              <CourseDetail title="Job Opportunities" content="Research Assistant (Pharmacy & Pharmaceutical Sciences)" />
+            </div>
           </div>
           <div>
             <h2>Find Mentor</h2>
