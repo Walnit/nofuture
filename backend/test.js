@@ -1,18 +1,29 @@
 const request = require('supertest');
-const { app } = require('./server');
+const { app, start, server } = require('./server');
 
-describe('API Endpoints', () => {
-  it('responds with Hello World!', async () => {
-    const response = await request(app).get('/');
-    expect(response.statusCode).toBe(200);
-    expect(response.text).toContain('Hello World!');
-  });
-
-  it('fetches events', async () => {
-    const response = await request(app).get('/events');
-    expect(response.statusCode).toBe(200);
-    expect(response.body).toBeInstanceOf(Array);
-  });
+beforeAll(async () => {
+  start();
 });
 
+afterAll(async () => {
+  await new Promise(resolve => server.close(resolve));
+});
 
+describe('API Endpoints', () => {
+  it('GET / should return Hello World', async () => {
+    const res = await request(app).get('/');
+    expect(res.statusCode).toEqual(200);
+    expect(res.text).toContain('Hello World!');
+  });
+
+  it('GET /events should return events array', async () => {
+    const res = await request(app).get('/events');
+    expect(res.statusCode).toEqual(200);
+    expect(res.body).toBeInstanceOf(Array);
+  });
+
+  it('GET /secure should require authentication', async () => {
+    const res = await request(app).get('/secure');
+    expect(res.statusCode).toBeGreaterThanOrEqual(400);
+  });
+});

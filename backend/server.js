@@ -14,7 +14,7 @@ app.get('/', (request, response) => {
   response.send('Hello World!');
 });
 
-// Dynamic fetching of events from the database
+// Dynamically fetch events from the database
 app.get('/events', async (request, response) => {
   try {
     const result = await db.query('SELECT * FROM events');
@@ -25,12 +25,14 @@ app.get('/events', async (request, response) => {
   }
 });
 
-// Secure route that requires authentication
+// secure route (requires auth)
 app.get('/secure', authenticateToken, (request, response) => {
   response.send(`Hello, ${request.user.name}! This is a secure area.`);
 });
 
-// Server setup
+
+let server;
+
 function start() {
   server = app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
@@ -38,5 +40,7 @@ function start() {
     console.error('Error starting server:', err);
   });
 }
+
+start();
 
 module.exports = { app, start };
