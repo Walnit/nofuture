@@ -1,27 +1,36 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const authenticateToken = require('./middleware');
+const db = require('./database');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-
-let events = [
-  {id: 1, date: "13 Mar", content: "NYP Open House"},
-  {id: 2, date: "15 Mar", content: "Pharmaceutical Conferences"},
-  {id: 3, date: "16 Mar", content: "Dialogue Sessions by Industrial Experts, Networking Session"}
-];
+app.use(cors()); // for cross origin requests
 
 // Public route
 app.get('/', (request, response) => {
   response.send('Hello World!');
 });
 
-// Secure route
+// Dynamically fetch events from the database
+app.get('/events', async (request, response) => {
+  try {
+    const result = await db.query('SELECT * FROM events');
+    response.json(result.rows);
+  } catch (err) {
+    console.error('Failed to fetch events:', err);
+    response.status(500).send('Server error');
+  }
+});
+
+// secure route (requires auth)
 app.get('/secure', authenticateToken, (request, response) => {
   response.send(`Hello, ${request.user.name}! This is a secure area.`);
 });
-  
+
+
 let server;
 
 function start() {
@@ -32,4 +41,6 @@ function start() {
   });
 }
 
-module.exports = { app, start, server };
+start();
+
+module.exports = { app, start };

@@ -106,6 +106,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-right: 20px;
 }
 .coursedetail-container {
   height: auto;
@@ -121,6 +122,7 @@
   color: black;
   font-size: 15px;
 }
+
 .home-container {
   display: flex;
   flex-direction: column;
@@ -218,4 +220,47 @@
   font-size: 24px;
   border-radius: 100px;
   margin-bottom: 24px;
+}
+
+/* FindMentor */
+.fmentor-container{
+  height: auto;
+  width: auto;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.findmentor-container{
+  height: auto;
+  width: auto;
+  padding: 1em;
+  display: flex;
+
+}
+.findmentor-content{
+  margin-left: 20px;
+}
+.findmentor-content-title{
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.findmentor-detail{
+  margin-bottom: 10px;
+}
+.findmentor-profile{
+  background-color: grey;
+  height: 15px;
+  width: 130px;
+  padding: 8px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: white;
+
+
 }
