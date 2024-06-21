@@ -2,7 +2,7 @@ import React from "react";
 import Navbars from "./Navbar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function MyComponent() {
+function CourseList() {
   return (
     <>      
     <Navbars/>
@@ -250,4 +250,4 @@ function MyComponent() {
   );
 }
 
-export default MyComponent;
+export default CourseList

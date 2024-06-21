@@ -1,13 +1,7 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { Container, Nav, Navbar, Row, Col, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import { FaSearch } from 'react-icons/fa';
+import { Link, Outlet } from 'react-router-dom';
 
 function Navbars() {
   return (
@@ -18,31 +12,31 @@ function Navbars() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link  href="#home">
-                Home
-              </Nav.Link>
-              <Nav.Link href="#features">CourseFinderQuiz</Nav.Link>
-              <Nav.Link href="#pricing">Full Course List</Nav.Link>
+              <Nav.Item>
+                <Nav.Link as={Link} to="/">Home</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link as={Link} to="/CourseQuiz">CourseFinderQuiz</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link as={Link} to="/CourseList">Full Course List</Nav.Link>
+              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
           <Navbar.Collapse className="justify-content-end">
-         
-          <Form inline>
-        <Row>
-          <Col xs="auto">
-            <Form.Control
-             
-            autoFocus={true}
-              type="text"
-              placeholder="Search Course"
-              className=" mr-sm-2"
-            />
-           
-          </Col>
-        
-        </Row>
-      </Form>
-        </Navbar.Collapse>
+            <Form inline>
+              <Row>
+                <Col xs="auto">
+                  <Form.Control
+                    autoFocus={true}
+                    type="text"
+                    placeholder="Search Course"
+                    className="mr-sm-2"
+                  />
+                </Col>
+              </Row>
+            </Form>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </>
