@@ -23,13 +23,13 @@ export default function CoursefinderQuiz() {
       </Row>
       <Row className="justify-content-center">
         <Col xs={12} md={4} lg={2} className="mb-3 d-grid gap-2">
-          <Button size="lg" variant="light" className="w-100">POLY</Button>
+          <Button size="lg" variant="light" className="w-100"><a href="http://localhost:5173/CourseInfo">POLY</a></Button>
         </Col>
         <Col xs={12} md={4} lg={2} className="mb-3 d-grid gap-2">
-          <Button size="lg" variant="light" className="w-100">ITE</Button>
+          <Button size="lg" variant="light" className="w-100"><a href="http://localhost:5173/CourseInfo">ITE</a></Button>
         </Col>
         <Col xs={12} md={4} lg={2} className="mb-3 d-grid gap-2">
-          <Button size="lg" variant="light" className="w-100">UNI</Button>
+          <Button size="lg" variant="light" className="w-100"><a href="http://localhost:5173/CourseInfo">UNI</a></Button>
         </Col>
       </Row> 
       <br/>

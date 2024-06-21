@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
+import CourseQuiz from "./CourseQuiz";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbars from "./Navbars";
+import Navbars from "./Navbar";
 import Container from "react-bootstrap/esm/Container";
 import { FaRegCompass } from "react-icons/fa";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { Outlet } from "react-router-dom";
+import Middlesections from "./Middlesections";
 
 export default function HomePage() {
   const inputRef = useRef(null);
@@ -17,7 +19,8 @@ export default function HomePage() {
 
   return (
     <>
-      <Navbars />
+
+      <Outlet/>
       <br />
       <Container className="pb-5">
         <div className="text-sm-start text-lg-center text-xl-center">
@@ -50,28 +53,30 @@ export default function HomePage() {
             />
           </div>
         </div>
-        <br />
+        <br/>
 
-        <Container fluid className="p-5 bg-light rounded-5" style={{ background: 'linear-gradient(100deg, #ABD3DA  0%, #FCB795 100%)' }}>
-          <Row className="justify-content-center text-center mb-3">
-            <h2 className="text-sm-start text-lg-center text-xl-center"><span><FaRegCompass /></span> EXPLORE COURSES </h2>
-            <p className="text-sm-start text-lg-center text-xl-center">Are you a prospective Poly, ITE, or tertiary student?</p>
-          </Row>
-          <Row className="justify-content-center">
-            <Col xs={12} md={4} lg={2} className="mb-3 d-grid gap-2">
-              <Button size="lg" variant="light" className="w-100">POLY</Button>
-            </Col>
-            <Col xs={12} md={4} lg={2} className="mb-3 d-grid gap-2">
-              <Button size="lg" variant="light" className="w-100">ITE</Button>
-            </Col>
-            <Col xs={12} md={4} lg={2} className="mb-3 d-grid gap-2">
-              <Button size="lg" variant="light" className="w-100">UNI</Button>
-            </Col>
-          </Row>
-        </Container>
-        <br />
-        <Outlet />
+        <Container fluid className="p-5 bg-light rounded-5" style={{   background: 'linear-gradient(100deg, #ABD3DA  0%, #FCB795 100%)'
+}}>
+      <Row className="justify-content-center text-center mb-3">
+      <h2 className="text-sm-start text-lg-center text-xl-center"><span><FaRegCompass/></span> EXPLORE COURSES </h2>
+        <p className="text-sm-start text-lg-center text-xl-center">Are you a prospective Poly, ITE, or tertiary student?</p>
+      </Row>
+      <Row className="justify-content-center">
+        <Col xs={12} md={4} lg={2} className="mb-3 d-grid gap-2">
+          <Button size="lg" variant="light" className="w-100">POLY</Button>
+        </Col>
+        <Col xs={12} md={4} lg={2} className="mb-3 d-grid gap-2">
+          <Button size="lg" variant="light" className="w-100">ITE</Button>
+        </Col>
+        <Col xs={12} md={4} lg={2} className="mb-3 d-grid gap-2">
+          <Button size="lg" variant="light" className="w-100">UNI</Button>
+        </Col>
+      </Row>
+    </Container>
+    <br/>
+<CourseQuiz/>
       </Container>
-    </>
+      
+          </>
   );
 }

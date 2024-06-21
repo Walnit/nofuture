@@ -1,11 +1,12 @@
 import React from "react";
 import Navbars from "./Navbar";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Outlet } from "react-router-dom";
 
 function CourseList() {
   return (
     <>      
-    <Navbars/>
+
     <br/>
         <p  className="text-sm-start text-lg-center text-xl-center"> Home &gt;{" "}  Polytechnic Diploma Courses</p>
 
@@ -246,6 +247,7 @@ function CourseList() {
           }
         }
       `}</style>
+      <Outlet/>
     </>
   );
 }
