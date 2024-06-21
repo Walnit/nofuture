@@ -2,6 +2,7 @@ import React from "react";
 import ReviewCard from "./ReviewCard";
 import ExperienceItem from "./ExperienceItem";
 import CourseDetail from "./CourseDetail";
+import '../App.css'
 
 export default function Middlesections() {
   return (
